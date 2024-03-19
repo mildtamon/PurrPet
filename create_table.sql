@@ -67,8 +67,7 @@ CREATE TABLE staffs (
     staff_contact CHAR (10),
     staff_bank_book CHAR (12),
     staff_address CHARACTER VARYING (200),
-    staff_type CHARACTER VARYING (20),
-    staff_password CHARACTER VARYING (10)
+    staff_type CHARACTER VARYING (20)
 );
 
 CREATE TABLE customers (
