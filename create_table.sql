@@ -15,6 +15,7 @@ CREATE TABLE products (
     prod_brand CHARACTER VARYING (200),
     prod_range CHARACTER VARYING (100),
 	prod_desc CHARACTER VARYING (5000),
+    prod_size CHARACTER VARYING (30),
 	prod_type CHARACTER VARYING (30),
 	animal_type CHARACTER VARYING (20),
     prod_barcode CHARACTER VARYING (12),
@@ -25,7 +26,6 @@ CREATE TABLE orders (
 	trans_id CHARACTER VARYING (20) PRIMARY KEY,
     prod_id CHARACTER VARYING (20),
 	trans_date TIMESTAMP,
-	lot_number CHARACTER VARYING (20),
 	exp_date DATE,
 	amount INTEGER,
     cost INTEGER,
@@ -67,7 +67,11 @@ CREATE TABLE staffs (
     staff_contact CHAR (10),
     staff_bank_book CHAR (12),
     staff_address CHARACTER VARYING (200),
-    staff_type CHARACTER VARYING (20)
+    staff_type CHARACTER VARYING (20),
+    workplace CHARACTER VARYING (20),
+    salary INTEGER,
+    FOREIGN KEY (workplace) REFERENCES shops (shop_id) ON UPDATE CASCADE ON DELETE CASCADE
+
 );
 
 CREATE TABLE customers (
