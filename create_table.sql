@@ -7,10 +7,10 @@ DROP TABLE IF EXISTS shops CASCADE;
 DROP TABLE IF EXISTS staffs CASCADE;
 DROP TABLE IF EXISTS customers CASCADE;
 DROP TABLE IF EXISTS sales CASCADE;
-
+DROP TABLE IF EXISTS request CASCADE;
 
 CREATE TABLE products (
-	prod_id CHARACTER VARYING (20) PRIMARY KEY,
+	prod_id SERIAL PRIMARY KEY,
 	prod_name CHARACTER VARYING (200),
     prod_img_URL CHARACTER VARYING (200),
     prod_brand CHARACTER VARYING (200),
@@ -25,18 +25,20 @@ CREATE TABLE products (
 
 CREATE TABLE orders (
 	trans_id CHARACTER VARYING (20) PRIMARY KEY,
-    prod_id CHARACTER VARYING (20),
+    receipt_img_URL CHARACTER VARYING (200),
+    prod_id INTEGER,
 	trans_date DATE,
 	exp_date DATE,
 	amount INTEGER,
-    cost INTEGER,
+    cost_per_unit INTEGER,
+    total_cost INTEGER,
 	FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE distributions (
 	dist_id CHARACTER VARYING (20) PRIMARY KEY,
-    prod_id CHARACTER VARYING (20),
-	branch_id CHARACTER VARYING (5),
+    prod_id INTEGER,
+	branch_id INTEGER,
     trans_date TIMESTAMP,
 	trans_id CHARACTER VARYING (20),
 	amount INTEGER,
@@ -45,8 +47,8 @@ CREATE TABLE distributions (
 );
 
 CREATE TABLE stocks (
-	goods_id CHARACTER VARYING (6),
-    branch_id CHARACTER VARYING (5),
+	goods_id INTEGER,
+    branch_id INTEGER,
     display_location CHARACTER VARYING (50),
     stock_location CHARACTER VARYING (50),
 	lot_number CHARACTER VARYING (20),
@@ -55,13 +57,13 @@ CREATE TABLE stocks (
 );
 
 CREATE TABLE shops (
-	shop_id CHARACTER VARYING (3) PRIMARY KEY,
+	shop_id SERIAL PRIMARY KEY,
 	shop_name CHARACTER VARYING (200),
 	shop_location CHARACTER VARYING (200)
 );
 
 CREATE TABLE staffs (
-	staff_id CHARACTER VARYING (5) PRIMARY KEY,
+	staff_id SERIAL PRIMARY KEY,
 	staff_name CHARACTER VARYING (200),
 	staff_citizen_id CHAR (13),
     staff_email CHARACTER VARYING (50),
@@ -69,26 +71,26 @@ CREATE TABLE staffs (
     staff_bank_book CHAR (12),
     staff_address CHARACTER VARYING (200),
     staff_type CHARACTER VARYING (20),
-    workplace CHARACTER VARYING (20),
+    workplace INTEGER,
     salary INTEGER,
     FOREIGN KEY (workplace) REFERENCES shops (shop_id) ON UPDATE CASCADE ON DELETE CASCADE
 
 );
 
 CREATE TABLE customers (
-	customer_id CHARACTER VARYING (5) PRIMARY KEY,
+	customer_id SERIAL PRIMARY KEY,
 	customer_name CHARACTER VARYING (50),
 	customer_email CHARACTER VARYING (50),
     customer_contact CHAR (10)
 );
 
 CREATE TABLE sales (
-	sell_id CHARACTER VARYING (10) PRIMARY KEY,
+	sell_id SERIAL PRIMARY KEY,
     sell_date TIMESTAMP,
-    shop_id CHARACTER VARYING (3),
-    staff_id CHARACTER VARYING (5),
-    customer_id CHARACTER VARYING (5),
-    goods_id CHARACTER VARYING (6),
+    shop_id INTEGER,
+    staff_id INTEGER,
+    customer_id INTEGER,
+    goods_id INTEGER,
     goods_name CHARACTER VARYING (200),
 	amount INTEGER,
     price INTEGER,
@@ -97,5 +99,15 @@ CREATE TABLE sales (
     FOREIGN KEY (staff_id) REFERENCES staffs (staff_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (customer_id) REFERENCES customers (customer_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (goods_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE request
+(
+    request_id SERIAL PRIMARY KEY,
+    prod_id INTEGER,
+    shop_id INTEGER,
+    amount INTEGER,
+    status CHARACTER VARYING(20),
+    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
