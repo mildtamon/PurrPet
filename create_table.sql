@@ -25,7 +25,7 @@ CREATE TABLE products (
 CREATE TABLE orders (
 	trans_id CHARACTER VARYING (20) PRIMARY KEY,
     prod_id CHARACTER VARYING (20),
-	trans_date TIMESTAMP,
+	trans_date DATE,
 	exp_date DATE,
 	amount INTEGER,
     cost INTEGER,
@@ -97,3 +97,4 @@ CREATE TABLE sales (
     FOREIGN KEY (customer_id) REFERENCES customers (customer_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (goods_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
+

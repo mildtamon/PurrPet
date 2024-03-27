@@ -91,7 +91,7 @@ INSERT INTO products(prod_id, prod_name, prod_brand, prod_range, prod_desc, prod
                     ('p13','Catstages Tower of Tracks Interactive 3-Tier Cat Toy','Catstages','all',
                      'MENTALLY ENGAGING TRACKS TOY: This interactive cat toy is designed with 3 levels of tracks and 6 brightly colored moving balls to attract kitty’s attention! ' ||
                      'Your cat will adore batting, swatting, and pouncing the bright colored balls as they engage their natural instincts to hunt.',
-                     '5.5 x 1 x 6.5 inches; 8.8 ounces','toy','cat','333048158342',249);
+                     '5.5x1x6.5"; 8.8 ounces','toy','cat','333048158342',249);
 INSERT INTO products(prod_id, prod_name, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
                     ('p14','PetArmor Plus Flea and Tick Prevention for Dogs, Dog Flea and Tick Treatment, 3 Doses, Waterproof Topical, Fast Acting, Small Dogs (5-22 lbs)',
                      'PetArmor','Small Dogs (2-10 kg)',
@@ -104,10 +104,10 @@ INSERT INTO products(prod_id, prod_name, prod_brand, prod_range, prod_desc, prod
                      '15 ML','medicine','cat','449042345342',123);
 --
 INSERT INTO orders(trans_id, prod_id, trans_date, exp_date, amount, cost) VALUES
-                    ('t00001','p01',2023-11-11,2025-08-11,100,35);
+                    ('t00001','p01','2023-11-11 14:30:15','2025-08-11',100,35);
 
 INSERT INTO distributions(dist_id, prod_id, branch_id, trans_date, trans_id, amount) VALUES
-                    ('d00001','p01','s01',2023-12-21,'t00001',70);
+                    ('d00001','p01','s01','2023-12-21 10:48:40','t00001',70);
 
 INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
                     ('p01','s01','zone A shelf 1','back office shelf #1','l00001',69);
@@ -135,4 +135,4 @@ INSERT INTO customers(customer_id, customer_name, customer_email, customer_conta
                         ('c02','bob','bob@gmail.com','0926783628');
 
 INSERT INTO sales(sell_id, sell_date, shop_id, staff_id, customer_id, goods_id, goods_name, amount, price, payment_method) VALUES
-                ('sl00001',2024-3-22,'s01','st01','c00','p01','SmartHeart Roast Beef Flavor 500 g',1,45,'QR code')
+                ('sl00001','2024-3-22 15:09:10','s01','st01','c00','p01','SmartHeart Roast Beef Flavor 500 g',1,45,'QR code')
