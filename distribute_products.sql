@@ -1,16 +1,4 @@
--- 1. function to call when order product (add the amount to stocks branch 1 (warehouse))
-create or replace procedure addToWarehouse(product_id INTEGER, stock_loc varchar, lot varchar, amount INTEGER) as
-    $$
-    BEGIN
-        INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
-        (product_id, 1, NULL, stock_loc, lot, addToWarehouse.amount);
-    END;
-    $$ LANGUAGE PLPGSQL;
-
--- test function
--- call addToWarehouse(1,'storage #1 shelf #2','t00001',100);
-
--- 2. function to call when distribute product, will automatically update stock for warehouse and shop
+-- 1. function to call when distribute product, will automatically update stock for warehouse and shop
 --      1. update amount of warehouse stock -= distributed number
 --      2. update amount of shop_id stock += distributed number
 create or replace procedure distribute(to_branch INTEGER, product_id INTEGER, dist_amount INTEGER, lot varchar) as

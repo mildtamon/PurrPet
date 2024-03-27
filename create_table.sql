@@ -27,6 +27,7 @@ CREATE TABLE orders (
 	trans_id CHARACTER VARYING (20) PRIMARY KEY,
     receipt_img_URL CHARACTER VARYING (200),
     prod_id INTEGER,
+    prod_name CHARACTER VARYING (200),
 	trans_date DATE,
 	exp_date DATE,
 	amount INTEGER,

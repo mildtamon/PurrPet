@@ -133,10 +133,12 @@ INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc,
                      '15 ML','medicine','cat','449042345342',123);
 
 -- insert orders (from outside to warehouse)
-INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit, total_cost) VALUES
-                    ('t00001','bit.ly/ashkasdlj',1,'2023-11-11 14:30:15','2025-08-11',100,35, 3500);
-INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit,total_cost) VALUES
-                    ('t00002','bit.ly/ask234o9sdfs',1,'2024-01-01 13:45:30','2026-04-23',50,35,1750);
+-- เปลี่ยนเป็นเรียกจาก order.orderProduct()
+-- INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit, total_cost) VALUES
+--                     ('t00001','bit.ly/ashkasdlj',1,'2023-11-11 14:30:15','2025-08-11',100,35, 3500);
+-- INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit,total_cost) VALUES
+--                     ('t00002','bit.ly/ask234o9sdfs',1,'2024-01-01 13:45:30','2026-04-23',50,35,1750);
+
 
 -- INSERT STOCKS (will be change after orders is finished)
 -- insert stocks (from outside to warehouse)
