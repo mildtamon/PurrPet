@@ -1,0 +1,3 @@
+-- TODO: add order to warehouse,
+--       INSERT INTO orders(trans_id, prod_id, trans_date, exp_date, amount, cost)
+--       and INSERT INTO products(...) [auto increment pk] if not exist in products table already.

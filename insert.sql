@@ -147,13 +147,13 @@ INSERT INTO distributions(dist_id, prod_id, branch_id, trans_date, trans_id, amo
 
 -- insert stocks (all products and where it is stored (shops + warehouse))
 INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
-                    ('p01','s01','zone A shelf 1','back office shelf #1','l00001',69);
+                    ('p01','s01','zone A shelf 1','back office shelf #1','t00001',69);
 INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
-                    ('p01','s01','zone A shelf 1','back office shelf #1','l00002',3);
+                    ('p01','s01','zone A shelf 1','back office shelf #1','t00001',3);
 INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
-                    ('p04','s02','zone A shelf 3','back office shelf #2','l00001',30);
+                    ('p04','s02','zone A shelf 3','back office shelf #2','t00001',30);
 INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
-                    ('p08','s02','zone A shelf 3','back office shelf #2','l00001',20);
+                    ('p08','s02','zone A shelf 3','back office shelf #2','t00001',20);
 
 -- insert shops (all shops location)
 INSERT INTO shops(shop_id,shop_name,shop_location) VALUES ('s01','Salaya pet shop',
