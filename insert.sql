@@ -135,42 +135,25 @@ INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc,
 -- insert orders (from outside to warehouse)
 -- เปลี่ยนเป็นเรียกจาก order.orderProduct()
 -- call
--- INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit, total_cost) VALUES
---                     ('t00001','bit.ly/ashkasdlj',1,'2023-11-11 14:30:15','2025-08-11',100,35, 3500);
+INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit, total_cost) VALUES
+                    ('t00001','bit.ly/ashkasdlj',1,'2023-11-11 14:30:15','2025-08-11',100,35, 3500);
 -- INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit,total_cost) VALUES
 --                     ('t00002','bit.ly/ask234o9sdfs',1,'2024-01-01 13:45:30','2026-04-23',50,35,1750);
 
 
 -- INSERT STOCKS (will be change after orders is finished)
 -- insert stocks (from outside to warehouse)
--- call addtowarehouse(1,'storage #1 shelf #1','t00001',100);
--- call addtowarehouse(2,'storage #1 shelf #2','t00002',50);
--- call addtowarehouse(6,'storage #1 shelf #3','t00003',25);
--- call addtowarehouse(10,'storage #1 shelf #3','t00004',10);
+call addtowarehouse(1,'storage #1 shelf #1','t00001',100);
+call addtowarehouse(2,'storage #1 shelf #2','t00002',50);
+call addtowarehouse(6,'storage #1 shelf #3','t00003',25);
+call addtowarehouse(10,'storage #1 shelf #3','t00004',10);
 
 -- insert stocks (from warehouse to branches)
--- call distribute(2, 1, 60, 't00001');
+call distribute(2, 1, 60, 't00001');
+-- these doesn't work yet because there is only order 't00001' (from INSERT INTO orders, just for testing)
 -- call distribute(2, 2, 20, 't00002');
 -- call distribute(3, 2, 10, 't00002');
 -- call distribute(3, 10, 5, 't00004');
-
--- TODO: (mild) add to distributions
-
--- -- insert distributions (from warehouse to branches)
--- INSERT INTO distributions(dist_id, prod_id, branch_id, trans_date, trans_id, amount) VALUES
---                     ('d00001',1,2,'2023-12-21 10:48:40','t00001',70);
--- INSERT INTO distributions(dist_id, prod_id, branch_id, trans_date, trans_id, amount) VALUES
---                     ('d00002',1,3,'2023-12-21 11:20:30','t00001',30);
---
--- insert stocks (all products and where it is stored (shops + warehouse))
--- INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
---                     (1,2,'zone A shelf 1','back office shelf #1','t00001',70);
--- INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
---                     (1,2,'zone A shelf 1','back office shelf #1','t00002',3);
--- INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
---                     (4,3,'zone A shelf 3','back office shelf #2','t00004',30);
--- INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
---                     (8,3,'zone A shelf 3','back office shelf #2','t00005',20);
 
 -- insert shops (all shops location)
 INSERT INTO shops(shop_name,shop_location) VALUES ('Ladkrabang warehouse',

@@ -37,7 +37,7 @@ CREATE TABLE orders (
 );
 
 CREATE TABLE distributions (
-	dist_id CHARACTER VARYING (20) PRIMARY KEY,
+	dist_id SERIAL PRIMARY KEY,
     prod_id INTEGER,
 	branch_id INTEGER,
     trans_date TIMESTAMP,
