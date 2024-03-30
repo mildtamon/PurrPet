@@ -2,6 +2,7 @@
 
 -- insert products
 INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+
                     ('SmartHeart Roast Beef Flavor',
                             'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
                             'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
@@ -132,14 +133,13 @@ INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc,
                             'This broad-spectrum treatment is a safe ally in the fight against worm infestations.',
                      '15 ML','medicine','cat','449042345342',123);
 
--- insert orders (from outside to warehouse)
--- เปลี่ยนเป็นเรียกจาก order.orderProduct()
--- call
-INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit, total_cost) VALUES
-                    ('t00001','bit.ly/ashkasdlj',1,'2023-11-11 14:30:15','2025-08-11',100,35, 3500);
--- INSERT INTO orders(trans_id,receipt_img_URL, prod_id, trans_date, exp_date, amount, cost_per_unit,total_cost) VALUES
---                     ('t00002','bit.ly/ask234o9sdfs',1,'2024-01-01 13:45:30','2026-04-23',50,35,1750);
-
+-- insert existing product order (from outside to warehouse)
+    call orderProduct('t01','bit.ly/324324','SmartHeart Roast Beef Flavor', '500 g','2025-3-1',100,23,'storage #1 shelf #1');
+--insert new product order
+    call orderProduct('t02','bit.ly/12ssafs','Purina Pro Plan Allergen Reducing, High Protein Cat Food, LIVECLEAR Chicken and Rice Formula','3 kg','2025-3-11',100,23,'storage #2 shelf #1');
+--insert new product's info
+    call updateProduct('Purina Pro Plan Allergen Reducing, High Protein Cat Food, LIVECLEAR Chicken and Rice Formula','https://m.media-amazon.com/images/I/81DAPW4w7HL._AC_SL1500_.jpg','Purina','Adult',
+                       'The first and only cat food with the power to reduce cat allergens by simply and safely neutralizing Fel D 1, a common allergen in cat saliva, with a key protein from eggs','3 kg', 'food','cat','029442741294',599);
 
 -- INSERT STOCKS (will be change after orders is finished)
 -- insert stocks (from outside to warehouse)
