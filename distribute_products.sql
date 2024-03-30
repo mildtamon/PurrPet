@@ -23,7 +23,7 @@ create or replace procedure distribute(to_branch INTEGER, product_id INTEGER, di
         -- Reduce amount from warehouse
         UPDATE stocks
         SET amount = amount - dist_amount
-        WHERE goods_id = product_id AND branch_id = 0 AND lot_number = lot;
+        WHERE goods_id = product_id AND branch_id = 1 AND lot_number = lot;
 
         -- Create distributions
         INSERT INTO distributions(prod_id, branch_id, trans_date, trans_id, amount)

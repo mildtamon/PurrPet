@@ -12,19 +12,19 @@ CREATE OR REPLACE FUNCTION allProdInBranch(id INTEGER)
     $$ LANGUAGE SQL;
 
 -- search bar
-CREATE OR REPLACE FUNCTION searchBy(t TEXT, id INTEGER)
+CREATE OR REPLACE FUNCTION searchBy(t TEXT, branch_id INTEGER)
     RETURNS TABLE(good_id INTEGER, prod_name varchar) AS
     $$
     BEGIN
         RETURN QUERY
             SELECT p.good_id, p.prod_name
-            FROM allProdInBranch(id) p
+            FROM allProdInBranch(branch_id) p
             WHERE p.prod_name LIKE '%' || t || '%';
     END;
     $$ LANGUAGE plpgsql;
 
 -- test function
-SELECT * FROM allProdInBranch(0);
-SELECT * FROM allProdInBranch(3);
+SELECT * FROM allProdInBranch(1);
+SELECT * FROM allProdInBranch(2);
 
-SELECT * FROM searchBy('SmartHeart Roast', '0')
+SELECT * FROM searchBy('Smart', 1)
