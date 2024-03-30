@@ -7,7 +7,8 @@ DROP TABLE IF EXISTS shops CASCADE;
 DROP TABLE IF EXISTS staffs CASCADE;
 DROP TABLE IF EXISTS customers CASCADE;
 DROP TABLE IF EXISTS sales CASCADE;
-DROP TABLE IF EXISTS request CASCADE;
+DROP TABLE IF EXISTS requests CASCADE;
+DROP TABLE IF EXISTS order_status CASCADE;
 
 CREATE TABLE products (
 	prod_id SERIAL PRIMARY KEY,
@@ -48,13 +49,13 @@ CREATE TABLE distributions (
 );
 
 CREATE TABLE stocks (
-	goods_id INTEGER,
+	prod_id INTEGER,
     branch_id INTEGER,
     display_location CHARACTER VARYING (50),
     stock_location CHARACTER VARYING (50),
 	lot_number CHARACTER VARYING (20),
 	amount INTEGER,
-    FOREIGN KEY (goods_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
+    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE shops (
@@ -91,24 +92,29 @@ CREATE TABLE sales (
     shop_id INTEGER,
     staff_id INTEGER,
     customer_id INTEGER,
-    goods_id INTEGER,
-    goods_name CHARACTER VARYING (200),
+    prod_id INTEGER,
+    prod_name CHARACTER VARYING (200),
 	amount INTEGER,
     price INTEGER,
     payment_method CHARACTER VARYING (10),
 	FOREIGN KEY (shop_id) REFERENCES shops (shop_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (staff_id) REFERENCES staffs (staff_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (customer_id) REFERENCES customers (customer_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (goods_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
+    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
-CREATE TABLE request
+CREATE TABLE order_status (
+    status_id SERIAL PRIMARY KEY,
+    status_name CHARACTER VARYING(50) NOT NULL
+);
+
+CREATE TABLE requests
 (
     request_id SERIAL PRIMARY KEY,
     prod_id INTEGER,
     shop_id INTEGER,
     amount INTEGER,
-    status CHARACTER VARYING(20),
-    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
+    status_id INTEGER,
+    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (status_id) REFERENCES order_status (status_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
-

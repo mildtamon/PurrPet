@@ -25,7 +25,7 @@ CREATE OR REPLACE PROCEDURE orderProduct(order_id VARCHAR, receipt_img_URL VARCH
             (order_id, orderProduct.receipt_img_URL, new_prod_id, product_name, CURRENT_DATE, orderProduct.exp_date, amt, orderProduct.cost_per_unit, orderProduct.cost_per_unit * amt);
 
         -- Insert the product into the warehouse stock
-        INSERT INTO stocks(goods_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
+        INSERT INTO stocks(prod_id, branch_id, display_location, stock_location, lot_number, amount) VALUES
             (new_prod_id, 1, NULL, stock_loc, order_id, amt);
     END;
     $$

@@ -17,3 +17,4 @@ CREATE OR REPLACE FUNCTION login(name varchar, assigned_shop varchar) RETURNS TA
 SELECT login('mild', 'Samyan pet shop');    -- false
 SELECT login('mild', 'Salaya pet shop');    -- true
 SELECT login('max', 'Samyan pet shop');     -- true
+SELECT login('john','Ladkrabang warehouse') --true

@@ -2,22 +2,22 @@ DROP VIEW IF EXISTS allProdInBranch;
 
 -- return table of all product in that shop given the shop_id
 CREATE OR REPLACE FUNCTION allProdInBranch(id INTEGER)
-    RETURNS TABLE(good_id INTEGER, branch INTEGER, prod_name varchar, prod_img_url varchar, amount INTEGER) AS
+    RETURNS TABLE(prod_id INTEGER, branch INTEGER, prod_name varchar, prod_img_url varchar, amount INTEGER) AS
     $$
-        SELECT s.goods_id, s.branch_id, p.prod_name, p.prod_img_url, SUM(s.amount) AS total_amount
+        SELECT s.prod_id, s.branch_id, p.prod_name, p.prod_img_url, SUM(s.amount) AS total_amount
         FROM stocks s
-        INNER JOIN products p ON s.goods_id = p.prod_id
+        INNER JOIN products p ON s.prod_id = p.prod_id
         WHERE id = s.branch_id
-        GROUP BY s.goods_id, s.branch_id, p.prod_name, p.prod_img_url;
+        GROUP BY s.prod_id, s.branch_id, p.prod_name, p.prod_img_url;
     $$ LANGUAGE SQL;
 
 -- search bar
 CREATE OR REPLACE FUNCTION searchBy(t TEXT, branch_id INTEGER)
-    RETURNS TABLE(good_id INTEGER, prod_name varchar) AS
+    RETURNS TABLE(prod_id INTEGER, prod_name varchar) AS
     $$
     BEGIN
         RETURN QUERY
-            SELECT p.good_id, p.prod_name
+            SELECT p.prod_id, p.prod_name
             FROM allProdInBranch(branch_id) p
             WHERE p.prod_name LIKE '%' || t || '%';
     END;

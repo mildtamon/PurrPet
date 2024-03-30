@@ -5,9 +5,9 @@ CREATE OR REPLACE FUNCTION prod_detail(product_id INTEGER, branch INTEGER)
     SELECT s.prod_id, p.prod_name, p.prod_brand, p.prod_desc, p.animal_type, p.prod_range, s.display_location, s.stock_location , p.prod_barcode, pb.amount, s.exp_date, p.price, p.prod_img_url
     FROM (SELECT prod_id, prod_name, display_location, stock_location, exp_date, lot_number, stocks.amount FROM stocks
               INNER JOIN orders o ON lot_number = trans_id
-              WHERE goods_id = product_id AND stocks.amount > 0 AND stocks.branch_id = branch) as s
+              WHERE prod_id = product_id AND stocks.amount > 0 AND stocks.branch_id = branch) as s
     INNER JOIN products p ON p.prod_id = s.prod_id,
-    allprodinbranch(branch) pb WHERE pb.good_id = product_id
+    allprodinbranch(branch) pb WHERE pb.prod_id = product_id
     ORDER BY exp_date
     LIMIT 1
     $$ LANGUAGE SQL;
