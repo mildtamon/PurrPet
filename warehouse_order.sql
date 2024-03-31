@@ -32,28 +32,28 @@ CREATE OR REPLACE PROCEDURE orderProduct(order_id VARCHAR, receipt_img_URL VARCH
     LANGUAGE PLPGSQL;
 -- test function
 
--- 2. function to update new product information
-create or replace procedure updateProduct(product_name varchar,product_img_URL varchar, product_brand varchar, product_range varchar, product_desc varchar, product_size varchar, product_type varchar, animal_type varchar, product_barcode varchar, product_price INTEGER) as
-    $$
-    BEGIN
-        PERFORM 1
-        FROM products
-        WHERE prod_name = product_name AND prod_size = product_size;
-
-        IF FOUND THEN
-            -- Update existing products
-            UPDATE products
-            SET prod_img_url = product_img_URL,
-                prod_brand = product_brand,
-                prod_desc = product_desc,
-                prod_range = product_range,
-                prod_type = product_type,
-                animal_type = updateProduct.animal_type,
-                prod_barcode = product_barcode,
-                price = product_price
-            WHERE prod_name = product_name AND prod_size = product_size;
-        END IF;
-    END;
-    $$ LANGUAGE PLPGSQL;
---test function
-call updateProduct('dummy','https://inwfile.com/s-dl/l003sa.png','perrpet','all','coolest cat food in da world','123 g','food','cat','284028494412',79);
+-- -- 2. function to update new product information
+-- create or replace procedure updateProduct(product_name varchar,product_img_URL varchar, product_brand varchar, product_range varchar, product_desc varchar, product_size varchar, product_type varchar, animal_type varchar, product_barcode varchar, product_price INTEGER) as
+--     $$
+--     BEGIN
+--         PERFORM 1
+--         FROM products
+--         WHERE prod_name = product_name AND prod_size = product_size;
+--
+--         IF FOUND THEN
+--             -- Update existing products
+--             UPDATE products
+--             SET prod_img_url = product_img_URL,
+--                 prod_brand = product_brand,
+--                 prod_desc = product_desc,
+--                 prod_range = product_range,
+--                 prod_type = product_type,
+--                 animal_type = updateProduct.animal_type,
+--                 prod_barcode = product_barcode,
+--                 price = product_price
+--             WHERE prod_name = product_name AND prod_size = product_size;
+--         END IF;
+--     END;
+--     $$ LANGUAGE PLPGSQL;
+-- --test function
+-- call updateProduct('dummy','https://inwfile.com/s-dl/l003sa.png','perrpet','all','coolest cat food in da world','123 g','food','cat','284028494412',79);

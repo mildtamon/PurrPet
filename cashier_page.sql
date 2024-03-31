@@ -17,7 +17,6 @@ AFTER INSERT ON sales_detail
 FOR EACH ROW
 EXECUTE FUNCTION update_stock();
 
--- Recreate the procedure with the new name
 CREATE OR REPLACE PROCEDURE InsertOrderWithProducts (
     shop_id INTEGER,
     staff_id INTEGER,
@@ -63,5 +62,6 @@ BEGIN
 END;
 $$;
 
+call InsertOrderWithProducts(2, 2, 1, ARRAY[1, 2], ARRAY[2, 1], 'Cash',null);
 
-call InsertOrderWithProducts(2, 2, 1, ARRAY[1, 2], ARRAY[2, 1], 'Cash', 0);
+
