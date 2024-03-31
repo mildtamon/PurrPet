@@ -1,136 +1,136 @@
 -- INSERT DUMMY DATA
 
--- insert products
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('SmartHeart Roast Beef Flavor',
-                            'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
-                            'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
-                            'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
-                            'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
-                            'Immune System : Vitamin E and Selenium for strong immune system. ' ||
-                            'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
-                            'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
-                    '500 g','food','dog','012345678912',45);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('SmartHeart Roast Beef Flavor',
-                            'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
-                            'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
-                            'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
-                            'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
-                            'Immune System : Vitamin E and Selenium for strong immune system. ' ||
-                            'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
-                            'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
-                    '1.5 kg','food','dog','012345672313',139);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-        ('SmartHeart Roast Beef Flavor',
-                            'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
-                            'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
-                            'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
-                            'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
-                            'Immune System : Vitamin E and Selenium for strong immune system. ' ||
-                            'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
-                            'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
-                    '3.0 kg','food','dog','012345679414',240);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('SmartHeart Roast Beef Flavor',
-                            'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
-                            'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
-                            'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
-                            'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
-                            'Immune System : Vitamin E and Selenium for strong immune system. ' ||
-                            'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
-                            'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
-                    '10.0 kg','food','dog','012345324415',755);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('SmartHeart Roast Beef Flavor','https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
-                            'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
-                            'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
-                            'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
-                            'Immune System : Vitamin E and Selenium for strong immune system. ' ||
-                            'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
-                            'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
-                    '20.0 kg','food','dog','012345392416',1140);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('SmartHeart Chicken & Liver Flavor',
-                            'https://inwfile.com/s-dl/w1m0fl.png',
-                            'SmartHeart','All Toy, Small Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
-                            'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
-                            'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
-                            'Immune System : Vitamin E and Selenium for strong immune system. ' ||
-                            'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
-                            'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
-                    '450 g','food','dog','012373057819',55);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('SmartHeart Beef Steak Flavor',
-                            'https://www.perfectcompanion.com/uploads/stock/64.png',
-                            'SmartHeart','Adult, All Toy, Small Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
-                            'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
-                            'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
-                            'Immune System : Vitamin E and Selenium for strong immune system. ' ||
-                            'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
-                            'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
-                    '1.3 kg','food','dog','012373077820',150);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('Me-O Ocean Fish',
-                            'https://tailybuddy.com/products/232/960f04b773fd23f0354bd48507b8992e_tn.jpg',
-                            'Me-O','Adult, All Breeds','Complete and balanced nutrition for cats. ' ||
-                            'Taurine is an amino acid that is essential for the proper functioning of the eyes and to improve the cat''s eyesight. ' ||
-                            'Vitamin C boots cat''s immune system and helps reduce the detrimental effects of stress on your cat''s health. ' ||
-                            'Calcium, Phosphorus and Vitamin D help strengthen teeth and bones. ' ||
-                            'This Formula was developed to help prevent the risk of FLUTD (Feline Lower Urinary Tract Disease). ' ||
-                            'Omega 3 and Omega 6 from high quality oil in combination with Zinc will help nourish the cat''s hair and skin. ' ||
-                            'Lowsodium formula helps decrease the risks of high blood pressure, kidney and heart disease in cats',
-                    '450 g','food','cat','098764283945',68);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('Me-O Kitten Ocean Fish',
-                            'https://www.perfectcompanion.com/uploads/stock/154.png',
-                            'Me-O','Kitten, All Breeds','Complete and balanced nutrition for cats. ' ||
-                            'Taurine is an amino acid that is essential for the proper functioning of the eyes and to improve the cat''s eyesight. ' ||
-                            'Vitamin C boots cat''s immune system and helps reduce the detrimental effects of stress on your cat''s health. ' ||
-                            'Calcium, Phosphorus and Vitamin D help strengthen teeth and bones. ' ||
-                            'This Formula was developed to help prevent the risk of FLUTD (Feline Lower Urinary Tract Disease). ' ||
-                            'Omega 3 and Omega 6 from high quality oil in combination with Zinc will help nourish the cat''s hair and skin. ' ||
-                            'Lowsodium formula helps decrease the risks of high blood pressure, kidney and heart disease in cats',
-                    '400 g','food','cat','098764244945',68);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('Me-O Tuna in Jelly for Senior Cat 7+',
-                            'https://www.perfectcompanion.com/uploads/stock/b3182689-caa7-4a94-ad8a-1eb189a1cd9f.png',
-                            'Me-O','Senior, All Breeds','Made from real meat and real fish',
-                    '80 g','food','cat','098182048342',17);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('TetraMin Nutritionally Balanced Tropical Flake Food for Tropical Fish',
-                            'https://m.media-amazon.com/images/I/71yHwkhzSKL._AC_UF1000,1000_QL80_.jpg',
-                            'Tetra','All','TetraMin(R) Tropical Flakes have been improved with the fishkeeper''s success in mind. ' ||
-                            'Our upgraded formula is nutritionally balanced to support health. ' ||
-                            'TetraMin(R) Tropical Flakes continue to offer a complete diet with a clear water formula that''s easier to digest, leaving less waste in the tank.',
-                    '12 g','food','fish','028382048342',30);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('Cat Tree with Cat Condo and Big Hammock，Grey',
-                            'https://m.media-amazon.com/images/I/71t2Wh-yd4L._AC_UF1000,1000_QL80_.jpg',
-                            'YUNWEI','all','High quality faux fur, natural sisal posts durable for long time scratch. ' ||
-                            'The hanging ball can provide cats lot of fun,it also can be replaced. ' ||
-                            'The big condo can provide cats sleeping place as well as observe place.The round shape soft platform can let cats observe like a queen and look view outside of the window. ' ||
-                            'The hanging bed can let cats relax and sleep.And it can be removed and washed.',
-                     '22.44"L x 13.78"W x 39.37"H','house','cat','283048248342',2999);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('Catstages Tower of Tracks Interactive 3-Tier Cat Toy',
-                            'https://kataidian.com/cdn/shop/products/71QqO6_ZItL._AC_SL1500.jpg?v=1704395700',
-                            'Catstages','all',
-                            'MENTALLY ENGAGING TRACKS TOY: This interactive cat toy is designed with 3 levels of tracks and 6 brightly colored moving balls to attract kitty’s attention! ' ||
-                            'Your cat will adore batting, swatting, and pouncing the bright colored balls as they engage their natural instincts to hunt.',
-                     '5.5x1x6.5"; 8.8 ounces','toy','cat','333048158342',249);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('PetArmor Plus Flea and Tick Prevention for Dogs, Dog Flea and Tick Treatment, 3 Doses, Waterproof Topical, Fast Acting, Small Dogs (5-22 lbs)',
-                            'https://petarmor.com/cdn/shop/products/815249012864_PetArmor_MediumDog_F_T_Topical_3ct_FRNT.png?v=1669737146',
-                            'PetArmor','Small Dogs (2-10 kg)',
-                            'Effective, Waterproof Flea Treatment for Dogs: PetArmor Plus is a waterproof, flea & tick topical prevention for dogs that kills fleas, flea eggs, flea larvae, ticks, and chewing lice for up to 30 days after application',
-                     '3 tablets','medicine','dog','449048158342',123);
-INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
-                    ('HomeoPet Feline WRM Clear, Natural Tapeworm, Whipworm, Roundworm, and Hookworm Medicine for Cats',
-                            'https://www.homeopet.com/wp-content/uploads/2018/05/Feline_WRM_Clear_sm.jpg',
-                            'HomeoPet','all','WORM MEDICINE FOR CATS & KITTENS: Our WRM Clear natural pet medicine can help your cat or kitten naturally remove roundworm, tapeworm, whipworm, and hookworm. ' ||
-                            'This broad-spectrum treatment is a safe ally in the fight against worm infestations.',
-                     '15 ML','medicine','cat','449042345342',123);
+-- insert products (no longer using)
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('SmartHeart Roast Beef Flavor',
+--                             'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
+--                             'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
+--                             'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
+--                             'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
+--                             'Immune System : Vitamin E and Selenium for strong immune system. ' ||
+--                             'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
+--                             'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
+--                     '500 g','food','dog','012345678912',45);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('SmartHeart Roast Beef Flavor',
+--                             'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
+--                             'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
+--                             'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
+--                             'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
+--                             'Immune System : Vitamin E and Selenium for strong immune system. ' ||
+--                             'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
+--                             'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
+--                     '1.5 kg','food','dog','012345672313',139);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--         ('SmartHeart Roast Beef Flavor',
+--                             'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
+--                             'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
+--                             'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
+--                             'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
+--                             'Immune System : Vitamin E and Selenium for strong immune system. ' ||
+--                             'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
+--                             'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
+--                     '3.0 kg','food','dog','012345679414',240);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('SmartHeart Roast Beef Flavor',
+--                             'https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
+--                             'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
+--                             'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
+--                             'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
+--                             'Immune System : Vitamin E and Selenium for strong immune system. ' ||
+--                             'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
+--                             'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
+--                     '10.0 kg','food','dog','012345324415',755);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('SmartHeart Roast Beef Flavor','https://th-test-11.slatic.net/p/fbad54c19ba78795d85b5a1fc7d9a1fa.jpg',
+--                             'SmartHeart','Adult, All Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
+--                             'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
+--                             'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
+--                             'Immune System : Vitamin E and Selenium for strong immune system. ' ||
+--                             'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
+--                             'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
+--                     '20.0 kg','food','dog','012345392416',1140);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('SmartHeart Chicken & Liver Flavor',
+--                             'https://inwfile.com/s-dl/w1m0fl.png',
+--                             'SmartHeart','All Toy, Small Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
+--                             'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
+--                             'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
+--                             'Immune System : Vitamin E and Selenium for strong immune system. ' ||
+--                             'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
+--                             'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
+--                     '450 g','food','dog','012373057819',55);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('SmartHeart Beef Steak Flavor',
+--                             'https://www.perfectcompanion.com/uploads/stock/64.png',
+--                             'SmartHeart','Adult, All Toy, Small Breeds','Enhanced Brain Function : DHA (from fish oil) and choline (from lecithin) for enhanced brain and nervous system function. ' ||
+--                             'Healthy Heart : Omega3 fatty acids from fish oil for a healthy heart. ' ||
+--                             'Healthy Skin and Coat : Balanced Omega 3 & 6 essential fatty acids for a healthy skin and shiny coat. ' ||
+--                             'Immune System : Vitamin E and Selenium for strong immune system. ' ||
+--                             'Healthy Digestion : Highly digestible ingredients for improved digestion and stool quality. ' ||
+--                             'Strong Bones & Teeth : Calcium and Phosphorus for strong bones and teeth.',
+--                     '1.3 kg','food','dog','012373077820',150);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('Me-O Ocean Fish',
+--                             'https://tailybuddy.com/products/232/960f04b773fd23f0354bd48507b8992e_tn.jpg',
+--                             'Me-O','Adult, All Breeds','Complete and balanced nutrition for cats. ' ||
+--                             'Taurine is an amino acid that is essential for the proper functioning of the eyes and to improve the cat''s eyesight. ' ||
+--                             'Vitamin C boots cat''s immune system and helps reduce the detrimental effects of stress on your cat''s health. ' ||
+--                             'Calcium, Phosphorus and Vitamin D help strengthen teeth and bones. ' ||
+--                             'This Formula was developed to help prevent the risk of FLUTD (Feline Lower Urinary Tract Disease). ' ||
+--                             'Omega 3 and Omega 6 from high quality oil in combination with Zinc will help nourish the cat''s hair and skin. ' ||
+--                             'Lowsodium formula helps decrease the risks of high blood pressure, kidney and heart disease in cats',
+--                     '450 g','food','cat','098764283945',68);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('Me-O Kitten Ocean Fish',
+--                             'https://www.perfectcompanion.com/uploads/stock/154.png',
+--                             'Me-O','Kitten, All Breeds','Complete and balanced nutrition for cats. ' ||
+--                             'Taurine is an amino acid that is essential for the proper functioning of the eyes and to improve the cat''s eyesight. ' ||
+--                             'Vitamin C boots cat''s immune system and helps reduce the detrimental effects of stress on your cat''s health. ' ||
+--                             'Calcium, Phosphorus and Vitamin D help strengthen teeth and bones. ' ||
+--                             'This Formula was developed to help prevent the risk of FLUTD (Feline Lower Urinary Tract Disease). ' ||
+--                             'Omega 3 and Omega 6 from high quality oil in combination with Zinc will help nourish the cat''s hair and skin. ' ||
+--                             'Lowsodium formula helps decrease the risks of high blood pressure, kidney and heart disease in cats',
+--                     '400 g','food','cat','098764244945',68);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('Me-O Tuna in Jelly for Senior Cat 7+',
+--                             'https://www.perfectcompanion.com/uploads/stock/b3182689-caa7-4a94-ad8a-1eb189a1cd9f.png',
+--                             'Me-O','Senior, All Breeds','Made from real meat and real fish',
+--                     '80 g','food','cat','098182048342',17);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('TetraMin Nutritionally Balanced Tropical Flake Food for Tropical Fish',
+--                             'https://m.media-amazon.com/images/I/71yHwkhzSKL._AC_UF1000,1000_QL80_.jpg',
+--                             'Tetra','All','TetraMin(R) Tropical Flakes have been improved with the fishkeeper''s success in mind. ' ||
+--                             'Our upgraded formula is nutritionally balanced to support health. ' ||
+--                             'TetraMin(R) Tropical Flakes continue to offer a complete diet with a clear water formula that''s easier to digest, leaving less waste in the tank.',
+--                     '12 g','food','fish','028382048342',30);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('Cat Tree with Cat Condo and Big Hammock，Grey',
+--                             'https://m.media-amazon.com/images/I/71t2Wh-yd4L._AC_UF1000,1000_QL80_.jpg',
+--                             'YUNWEI','all','High quality faux fur, natural sisal posts durable for long time scratch. ' ||
+--                             'The hanging ball can provide cats lot of fun,it also can be replaced. ' ||
+--                             'The big condo can provide cats sleeping place as well as observe place.The round shape soft platform can let cats observe like a queen and look view outside of the window. ' ||
+--                             'The hanging bed can let cats relax and sleep.And it can be removed and washed.',
+--                      '22.44"L x 13.78"W x 39.37"H','house','cat','283048248342',2999);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('Catstages Tower of Tracks Interactive 3-Tier Cat Toy',
+--                             'https://kataidian.com/cdn/shop/products/71QqO6_ZItL._AC_SL1500.jpg?v=1704395700',
+--                             'Catstages','all',
+--                             'MENTALLY ENGAGING TRACKS TOY: This interactive cat toy is designed with 3 levels of tracks and 6 brightly colored moving balls to attract kitty’s attention! ' ||
+--                             'Your cat will adore batting, swatting, and pouncing the bright colored balls as they engage their natural instincts to hunt.',
+--                      '5.5x1x6.5"; 8.8 ounces','toy','cat','333048158342',249);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('PetArmor Plus Flea and Tick Prevention for Dogs, Dog Flea and Tick Treatment, 3 Doses, Waterproof Topical, Fast Acting, Small Dogs (5-22 lbs)',
+--                             'https://petarmor.com/cdn/shop/products/815249012864_PetArmor_MediumDog_F_T_Topical_3ct_FRNT.png?v=1669737146',
+--                             'PetArmor','Small Dogs (2-10 kg)',
+--                             'Effective, Waterproof Flea Treatment for Dogs: PetArmor Plus is a waterproof, flea & tick topical prevention for dogs that kills fleas, flea eggs, flea larvae, ticks, and chewing lice for up to 30 days after application',
+--                      '3 tablets','medicine','dog','449048158342',123);
+-- INSERT INTO products(prod_name, prod_img_URL, prod_brand, prod_range, prod_desc, prod_size, prod_type, animal_type, prod_barcode, price) VALUES
+--                     ('HomeoPet Feline WRM Clear, Natural Tapeworm, Whipworm, Roundworm, and Hookworm Medicine for Cats',
+--                             'https://www.homeopet.com/wp-content/uploads/2018/05/Feline_WRM_Clear_sm.jpg',
+--                             'HomeoPet','all','WORM MEDICINE FOR CATS & KITTENS: Our WRM Clear natural pet medicine can help your cat or kitten naturally remove roundworm, tapeworm, whipworm, and hookworm. ' ||
+--                             'This broad-spectrum treatment is a safe ally in the fight against worm infestations.',
+--                      '15 ML','medicine','cat','449042345342',123);
 
 --insert new product order and new product's info
 call orderProduct('t1','bit.ly/324324','SmartHeart Roast Beef Flavor', '500 g','2025-3-1',100,23,'storage #1 shelf #1');
@@ -264,14 +264,20 @@ call orderProduct('t16','bit.ly/12ssafs','Purina Pro Plan Allergen Reducing, Hig
 call updateProduct('Purina Pro Plan Allergen Reducing, High Protein Cat Food, LIVECLEAR Chicken and Rice Formula','https://m.media-amazon.com/images/I/81DAPW4w7HL._AC_SL1500_.jpg','Purina','Adult',
                        'The first and only cat food with the power to reduce cat allergens by simply and safely neutralizing Fel D 1, a common allergen in cat saliva, with a key protein from eggs','3 kg', 'food','cat','029442741294',599);
 
+-- order product to branch (request product)
+SELECT orderToBranch(1,50, 2);      -- request_id = 1
+SELECT orderToBranch(2,60, 2);      -- request_id = 2
+SELECT orderToBranch(2,10, 3);      -- request_id = 3
+SELECT orderToBranch(10,10, 3);     -- request_id = 4
 
--- insert stocks (from warehouse to branches)
-call distribute(2, 1, 60, 't1');
-call distribute(2, 2, 60, 't1');
--- these doesn't work yet because there is only order 't00001' (from INSERT INTO orders, just for testing)
--- call distribute(2, 2, 20, 't00002');
--- call distribute(3, 2, 10, 't00002');
--- call distribute(3, 10, 5, 't00004');
+-- distribute product (approve the request and ship product to branch)
+call distribute(1);
+call distribute(3);
+call distribute(2);
+
+-- product arrived at shop (request complete)
+call shipping_complete(1);
+call shipping_complete(2);
 
 -- insert shops (all shops location)
 INSERT INTO shops(shop_name,shop_location) VALUES ('Ladkrabang warehouse',

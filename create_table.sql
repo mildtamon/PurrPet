@@ -38,15 +38,33 @@ CREATE TABLE orders (
 	FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
+CREATE TABLE order_status (
+    status_id SERIAL PRIMARY KEY,
+    status_name CHARACTER VARYING(50) NOT NULL
+);
+
+CREATE TABLE requests
+(
+    request_id SERIAL PRIMARY KEY,
+    prod_id INTEGER,
+    shop_id INTEGER,
+    amount INTEGER,
+    status_id INTEGER,
+    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (status_id) REFERENCES order_status (status_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
 CREATE TABLE distributions (
 	dist_id SERIAL PRIMARY KEY,
+    request_id INTEGER,
     prod_id INTEGER,
 	branch_id INTEGER,
     trans_date TIMESTAMP,
 	trans_id CHARACTER VARYING (20),
 	amount INTEGER,
 	FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (trans_id) REFERENCES orders (trans_id) ON UPDATE CASCADE ON DELETE CASCADE
+    FOREIGN KEY (trans_id) REFERENCES orders (trans_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (request_id) REFERENCES requests (request_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE stocks (
@@ -109,20 +127,4 @@ CREATE TABLE sales_detail(
     FOREIGN KEY (staff_id) REFERENCES staffs (staff_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (customer_id) REFERENCES customers (customer_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
-);
-
-CREATE TABLE order_status (
-    status_id SERIAL PRIMARY KEY,
-    status_name CHARACTER VARYING(50) NOT NULL
-);
-
-CREATE TABLE requests
-(
-    request_id SERIAL PRIMARY KEY,
-    prod_id INTEGER,
-    shop_id INTEGER,
-    amount INTEGER,
-    status_id INTEGER,
-    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE,
-    FOREIGN KEY (status_id) REFERENCES order_status (status_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
