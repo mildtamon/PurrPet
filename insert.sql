@@ -267,6 +267,7 @@ call updateProduct('Purina Pro Plan Allergen Reducing, High Protein Cat Food, LI
 
 -- insert stocks (from warehouse to branches)
 call distribute(2, 1, 60, 't1');
+call distribute(2, 2, 60, 't1');
 -- these doesn't work yet because there is only order 't00001' (from INSERT INTO orders, just for testing)
 -- call distribute(2, 2, 20, 't00002');
 -- call distribute(3, 2, 10, 't00002');
@@ -299,8 +300,8 @@ INSERT INTO customers(customer_name, customer_email, customer_contact) VALUES
                         ('bob','bob@gmail.com','0926783628');
 
 -- insert sales (cashier sales)
-INSERT INTO sales(sell_date, shop_id, staff_id, customer_id, prod_id, prod_name, amount, price, payment_method) VALUES
-                ('2024-3-22 15:09:10',2,2,1,1,'SmartHeart Roast Beef Flavor 500 g',1,45,'QR code');
+-- INSERT INTO sales(sell_date, shop_id, staff_id, customer_id, prod_id, prod_name, amount, price, payment_method) VALUES
+--                 ('2024-3-22 15:09:10',2,2,1,1,'SmartHeart Roast Beef Flavor 500 g',1,45,'QR code');
 
 INSERT INTO order_status(status_name) VALUES ('ordering');
 INSERT INTO order_status(status_name) VALUES ('shipping');

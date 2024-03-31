@@ -1,7 +1,5 @@
 SELECT prod_id, prod_name, prod_img_url, amount  FROM allProdInBranch(2);
 
-DROP FUNCTION ordertobranch(integer,integer,integer);
-
 CREATE OR REPLACE FUNCTION orderToBranch(product_id INTEGER, amt INTEGER,to_branch INTEGER) RETURNS BOOLEAN AS
     $$
     declare numInWarehouse INTEGER;

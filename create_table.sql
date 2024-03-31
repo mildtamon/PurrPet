@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS shops CASCADE;
 DROP TABLE IF EXISTS staffs CASCADE;
 DROP TABLE IF EXISTS customers CASCADE;
 DROP TABLE IF EXISTS sales CASCADE;
+DROP TABLE IF EXISTS sales_detail CASCADE;
 DROP TABLE IF EXISTS requests CASCADE;
 DROP TABLE IF EXISTS order_status CASCADE;
 
@@ -76,7 +77,6 @@ CREATE TABLE staffs (
     workplace INTEGER,
     salary INTEGER,
     FOREIGN KEY (workplace) REFERENCES shops (shop_id) ON UPDATE CASCADE ON DELETE CASCADE
-
 );
 
 CREATE TABLE customers (
@@ -86,18 +86,26 @@ CREATE TABLE customers (
     customer_contact CHAR (10)
 );
 
+-- sub table
 CREATE TABLE sales (
-	sell_id SERIAL PRIMARY KEY,
-    sell_date TIMESTAMP,
+    id SERIAL PRIMARY KEY,
+    c_id INTEGER,
+    date DATE,
+    FOREIGN KEY (c_id) REFERENCES customers (customer_id) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+-- Where 1 order show many product
+CREATE TABLE sales_detail(
+    sale_detail_id INTEGER,
     shop_id INTEGER,
     staff_id INTEGER,
     customer_id INTEGER,
     prod_id INTEGER,
-    prod_name CHARACTER VARYING (200),
-	amount INTEGER,
+    amount INTEGER,
     price INTEGER,
     payment_method CHARACTER VARYING (10),
-	FOREIGN KEY (shop_id) REFERENCES shops (shop_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (sale_detail_id) REFERENCES sales (id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (shop_id) REFERENCES shops (shop_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (staff_id) REFERENCES staffs (staff_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (customer_id) REFERENCES customers (customer_id) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
