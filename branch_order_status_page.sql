@@ -1,5 +1,11 @@
 -- gives order requests made by this shop
-SELECT s.prod_id, p.prod_name, p.prod_size, amount, s.status_id
-FROM (SELECT d.dist_id, d.prod_id, d.amount, r.status_id FROM distributions d
-    INNER JOIN requests r ON r.request_id = d.request_id) as s,
-    products p where s.prod_id = p.prod_id
+CREATE OR REPLACE FUNCTION shoprequest(shop INTEGER)
+    RETURNS TABLE(prod_id INTEGER, prod_name varchar, prod_size varchar, amount INTEGER, status INTEGER) AS
+    $$
+        SELECT r.prod_id, p.prod_name, p.prod_size, amount, r.status_id FROM requests r
+        INNER JOIN public.products p on p.prod_id = r.prod_id
+        WHERE r.shop_id = shop;
+    $$ LANGUAGE sql;
+
+-- test function
+SELECT * FROM shoprequest(3);
