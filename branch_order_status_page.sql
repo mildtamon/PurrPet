@@ -8,4 +8,4 @@ CREATE OR REPLACE FUNCTION shoprequest(shop INTEGER)
     $$ LANGUAGE sql;
 
 -- test function
-SELECT * FROM shoprequest(3);
+SELECT * FROM shoprequest(2);

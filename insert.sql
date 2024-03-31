@@ -265,19 +265,52 @@ call updateProduct('Purina Pro Plan Allergen Reducing, High Protein Cat Food, LI
                        'The first and only cat food with the power to reduce cat allergens by simply and safely neutralizing Fel D 1, a common allergen in cat saliva, with a key protein from eggs','3 kg', 'food','cat','029442741294',599);
 
 -- order product to branch (request product)
-SELECT orderToBranch(1,50, 2);      -- request_id = 1
-SELECT orderToBranch(2,60, 2);      -- request_id = 2
-SELECT orderToBranch(2,10, 3);      -- request_id = 3
-SELECT orderToBranch(10,10, 3);     -- request_id = 4
+-- Salaya branch
+SELECT orderToBranch(1,20, 2);
+SELECT orderToBranch(2,20, 2);
+SELECT orderToBranch(3,20, 2);
+SELECT orderToBranch(6,10, 2);
+SELECT orderToBranch(7,10, 2);
+SELECT orderToBranch(9,10, 2);
+SELECT orderToBranch(13,5, 2);
+SELECT orderToBranch(14,10, 2);
+SELECT orderToBranch(15,5, 2);
+-- Samyan branch
+SELECT orderToBranch(2,20, 3);
+SELECT orderToBranch(3,20, 3);
+SELECT orderToBranch(8,10, 3);
+SELECT orderToBranch(10,10, 3);
+SELECT orderToBranch(12,5, 3);
+SELECT orderToBranch(13,5, 3);
+SELECT orderToBranch(16,20, 3);
 
 -- distribute product (approve the request and ship product to branch)
 call distribute(1);
-call distribute(3);
 call distribute(2);
+call distribute(3);
+call distribute(4);
+call distribute(5);
+call distribute(6);
+call distribute(7);
+call distribute(8);
+call distribute(9);
+call distribute(10);
+call distribute(11);
+call distribute(12);
+call distribute(13);
+call distribute(14);
 
 -- product arrived at shop (request complete)
 call shipping_complete(1);
 call shipping_complete(2);
+call shipping_complete(5);
+call shipping_complete(6);
+call shipping_complete(9);
+call shipping_complete(10);
+call shipping_complete(11);
+call shipping_complete(14);
+call shipping_complete(15);
+call shipping_complete(16);
 
 -- insert shops (all shops location)
 INSERT INTO shops(shop_name,shop_location) VALUES ('Ladkrabang warehouse',

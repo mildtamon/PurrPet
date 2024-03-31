@@ -6,7 +6,8 @@ CREATE OR REPLACE FUNCTION allProdInBranch(id INTEGER)
         FROM stocks s
         INNER JOIN products p ON s.prod_id = p.prod_id
         WHERE id = s.branch_id
-        GROUP BY s.prod_id, s.branch_id, p.prod_name, p.prod_img_url;
+        GROUP BY s.prod_id, s.branch_id, p.prod_name, p.prod_img_url
+        ORDER BY prod_id;
     $$ LANGUAGE SQL;
 
 -- search bar
@@ -22,7 +23,7 @@ CREATE OR REPLACE FUNCTION searchBy(t TEXT, branch_id INTEGER)
     $$ LANGUAGE plpgsql;
 
 -- test function
-SELECT * FROM allProdInBranch(1);
 SELECT * FROM allProdInBranch(2);
+SELECT * FROM allProdInBranch(3);
 
-SELECT * FROM searchBy('Smart', 1)
+SELECT * FROM searchBy('Smart', 2)

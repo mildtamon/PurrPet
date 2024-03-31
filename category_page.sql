@@ -8,4 +8,4 @@ CREATE OR REPLACE FUNCTION category(category varchar, shop_id INTEGER)
     $$ LANGUAGE sql;
 
 -- test function
-SELECT * FROM category('medicine', 1)
+SELECT * FROM category('food', 2)
