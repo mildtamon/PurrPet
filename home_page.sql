@@ -25,5 +25,4 @@ CREATE OR REPLACE FUNCTION searchBy(t TEXT, branch_id INTEGER)
 -- test function
 SELECT * FROM allProdInBranch(2);
 SELECT * FROM allProdInBranch(3);
-
 SELECT * FROM searchBy('Smart', 2)

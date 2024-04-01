@@ -62,6 +62,7 @@ BEGIN
 END;
 $$;
 
+--test function
 call InsertOrderWithProducts(2, 2, 1, ARRAY[1, 2], ARRAY[2, 1], 'Cash',null);
 
 

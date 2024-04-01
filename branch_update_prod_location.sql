@@ -49,10 +49,7 @@ create or replace procedure updateLocation(prod_id INTEGER,display_lo varchar, s
     END;
     $$ LANGUAGE PLPGSQL;
 
-call updateLocation(1,'','');
-
+-- test function
 SELECT * FROM ProductsLocationInShop(2);
-
 call updateLocation(1,'zone A shelf #1','back office shelf #1');
-
 SELECT * FROM ProductsLocationInShop(2);

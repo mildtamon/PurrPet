@@ -1,2 +1,0 @@
--- function edit storage
--- query
