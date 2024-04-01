@@ -153,20 +153,20 @@ SELECT orderToBranch(13,5, 3);
 SELECT orderToBranch(16,20, 3);
 
 -- distribute product (approve the request and ship product to branch)
-call distribute(1);
-call distribute(2);
-call distribute(3);
-call distribute(4);
-call distribute(5);
-call distribute(6);
-call distribute(7);
-call distribute(8);
-call distribute(9);
-call distribute(10);
-call distribute(11);
-call distribute(12);
-call distribute(13);
-call distribute(14);
+SELECT order_responds(1, 2);
+SELECT order_responds(2, 2);
+SELECT order_responds(3, 2);
+SELECT order_responds(4, 2);
+SELECT order_responds(5, 2);
+SELECT order_responds(6, 2);
+SELECT order_responds(7, 2);
+SELECT order_responds(8, 2);
+SELECT order_responds(9, 2);
+SELECT order_responds(10, 2);
+SELECT order_responds(11, 2);
+SELECT order_responds(12, 2);
+SELECT order_responds(13, 2);
+SELECT order_responds(14, 2);
 
 -- product arrived at shop (request complete)
 call shipping_complete(1);

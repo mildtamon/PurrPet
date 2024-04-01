@@ -74,7 +74,7 @@ CREATE TABLE stocks (
     stock_location CHARACTER VARYING (50),
 	lot_number CHARACTER VARYING (20),
 	amount INTEGER,
-    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE,
+    FOREIGN KEY (prod_id) REFERENCES products (prod_id) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 CREATE TABLE shops (

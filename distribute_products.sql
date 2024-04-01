@@ -26,9 +26,9 @@ create or replace procedure distribute(request_id INTEGER) as
         INSERT INTO distributions(prod_id, request_id, branch_id, trans_date, trans_id, amount)
         VALUES (v_prod_id, distribute.request_id, v_shop_id, CURRENT_TIMESTAMP, v_lot, v_amount);
 
-        UPDATE requests
-        SET status_id = 2
-        WHERE requests.request_id = distribute.request_id;
+--         UPDATE requests
+--         SET status_id = 2
+--         WHERE requests.request_id = distribute.request_id;
     END;
     $$ LANGUAGE PLPGSQL;
 
